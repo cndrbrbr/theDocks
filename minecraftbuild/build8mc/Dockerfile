@@ -8,7 +8,7 @@
 # docker exec -ti build8mc sh
 # (c) 2022 cndrbrbr
 #######################################################
-FROM java8
+FROM mcagjava8
 USER root
 RUN apt-get update -y \
     && apt-get -y upgrade \
