@@ -3,7 +3,7 @@
 # docker build -t build_c_mc .
 # (c) 2022 cndrbrbr
 #######################################################
-FROM java22
+FROM mcagjava22
 USER root
 RUN apt-get update -y \
     && apt-get -y upgrade \
