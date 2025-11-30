@@ -11,6 +11,6 @@ wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifac
 
 wget https://github.com/CreeperHost/Log4jPatcher/releases/download/v1.0.1/Log4jPatcher-1.0.1.jar
 
-mv spigot-*.jar /data
-mv Log4jPatcher*.jar /data
+mv spigot-*.jar /root/mc8software
+mv Log4jPatcher*.jar /root/mc8software 
 
