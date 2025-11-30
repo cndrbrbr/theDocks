@@ -3,7 +3,7 @@
 # 
 # Start with docker-compose
 # 
-# docker compose up -d
+# docker compose up -build oder -d
 # (c) 2022, (c) 2025 cndrbrbr
 # 05.01.2023 Update Migration meckminecraft 2023 (cndrbrbr)
 # 30.11.2025 Update Migration meckminecraft 2025 (cndrbrbr)
