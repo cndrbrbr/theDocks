@@ -10,19 +10,19 @@
 #############################################################
 version: "3.3"   
 services:
-  java8:
-    image: java8
+  mcagjava8:
+    image: mcagjava8
     build:
-        context: ../../java/java8
-        dockerfile: Dockerfile
-  java22:
-    image: java22
+      context: ../../java/java8
+      dockerfile: Dockerfile
+  mcagjava22:
+    image: mcagjava22
     build:
       context: ../../java/java22
       dockerfile: Dockerfile
   buildcmc:
     depends_on:
-      - java22
+      - mcagjava22
     image: buildcdmc
     build:
       context: ../../minecraftbuild/buildCmc
@@ -32,7 +32,7 @@ services:
   build8mc:
     image: build8mc
     depends_on:
-      - java8
+      - mcagjava8
     build:
       context: ../../minecraftbuild/build8mc
       dockerfile: Dockerfile
