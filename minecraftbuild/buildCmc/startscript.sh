@@ -6,6 +6,6 @@
 # (c) 2022 cndrbrbr
 #######################################################
 wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar \
-    && java -Xmx1024M -jar BuildTools.jar --rev 1.21.8
+    && java -Xmx1024M -jar BuildTools.jar --rev 1.21.10
 
-mv spigot-*.jar /data
+mv spigot-*.jar /root/mcCsoftware 
