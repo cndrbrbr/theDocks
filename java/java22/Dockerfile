@@ -4,18 +4,29 @@
 # docker run --rm java22
 # (c) 2025 cndrbrbr
 #######################################################
-FROM debian:12.12
 
-WORKDIR /root
-USER root
+FROM debian:bookworm-slim
 
-RUN echo "deb http://ftp.de.debian.org/debian sid main" >> /etc/apt/sources.list 
+# Install dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    wget \
+    gnupg \
+    ca-certificates \
+ && rm -rf /var/lib/apt/lists/*
 
+# Add Adoptium APT repo for JDK 22
+RUN wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor -o /usr/share/keyrings/adoptium.gpg && \
+    echo "deb [signed-by=/usr/share/keyrings/adoptium.gpg] https://packages.adoptium.net/artifactory/deb bookworm main" \
+    > /etc/apt/sources.list.d/adoptium.list
 
-RUN apt-get update -y \
-    && apt-get -y upgrade \
-    && apt-get -y install  screen mc nano
+# Install Temurin JDK 22
+RUN apt-get update && apt-get install -y temurin-22-jdk && \
+    rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install -y openjdk-22-jdk
+# Set JAVA_HOME
+ENV JAVA_HOME="/usr/lib/jvm/temurin-22-jdk"
+ENV PATH="$JAVA_HOME/bin:${PATH}"
+
+WORKDIR /app
 
 CMD ["java", "-version"]
