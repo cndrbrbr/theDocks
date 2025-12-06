@@ -1,0 +1,2 @@
+# some custom configuration at first startup
+# setup the individual server 
