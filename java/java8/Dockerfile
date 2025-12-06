@@ -16,6 +16,8 @@ FROM debian:12
 RUN apt-get update && apt-get install -y \
     wget \
     gnupg \
+    mc \
+    screen \
     apt-transport-https \
     ca-certificates \
     && rm -rf /var/lib/apt/lists/*
