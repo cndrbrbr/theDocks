@@ -6,4 +6,4 @@
 # (c) 2022 cndrbrbr
 #######################################################
 
-echo "current Minecraft set up yes" && sleep infinity
+echo "current Minecraft set up yes" && /root/mcsrvbase/start.sh && sleep infinity
