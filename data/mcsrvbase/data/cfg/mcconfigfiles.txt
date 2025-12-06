@@ -1,0 +1,2 @@
+# tar -cvf mcsrvbase.tgz -C /home/mint/2512/theDocks/data/ mcsrvbase
+# copy without path -C change path internally then copy minecraft folder

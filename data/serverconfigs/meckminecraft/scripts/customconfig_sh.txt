@@ -1,2 +1,3 @@
 # some custom configuration at first startup
 # setup the individual server 
+# special configs for Plugins

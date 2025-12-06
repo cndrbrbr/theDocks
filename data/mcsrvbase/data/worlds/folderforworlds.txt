@@ -1,0 +1,2 @@
+# tar -cvf backup.tar -C /home/user minecraft
+# copy without path -C change path internally then copy minecraft folder

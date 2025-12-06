@@ -3,34 +3,39 @@
 # docker build -t java17mc .
 # Start with docker-compose
 #
-# (c) 2022 cndrbrbr
+# (c) 2022  Create (cndrbrbr)
+# (c) 2025  Update detailed Volumes (cndrbrbr)
+# - config var für verzeichnisname der serverconfig
 #######################################################
-FROM java22
+FROM mcagjava22
+# env parameter which server aus compose
+ARG Minecraft_Version=1.21.10
+ARG Minecraft_Server="nc3"
 USER root
 RUN apt-get update --fix-missing -y
 RUN apt-get -y upgrade 
-RUN apt-get -y install mc nano
+
 
 WORKDIR /root
-RUN mkdir /root/mcservers
-RUN mkdir /root/bac
-RUN mkdir /root/tmpdata
-RUN mkdir /root/tmpdata/plugins
-RUN mkdir /root/tmpdata/mapdata
-RUN mkdir /root/tmpdata/config
+RUN mkdir /root/plugins             
+RUN mkdir /root/customConfig
+RUN mkdir /root/minecraftJar
 
 COPY ./startscript.sh /root
 COPY ./setupfiles.sh /root
-COPY ./startservices.sh /root
-COPY ./spigot-*.jar /root/tmpdata
-# jars
-COPY ./plugins/*  /root/tmpdata/plugins
-# zips
-COPY ./mapdata/*  /root/tmpdata/mapdata    
-
+COPY ./start.sh /root
+# server folders
+COPY ../../data/mcsrvbase.tgz /root
+# server software
+COPY ../../data/mcserversw/${Minecraft_Version}/* /root/minecraftJar
+# server customizing and worlds
+COPY ../../data/serverconfigs/${Minecraft_Server}/* /root/customconfig
+# all plugins for Minecraft_Version
+COPY ../../data/plugins/${Minecraft_Version}/*  /root/plugins
+  
 RUN chmod u+x /root/startscript.sh
 RUN chmod u+x /root/setupfiles.sh
-RUN chmod u+x /root/startservices.sh
+RUN chmod u+x /root/start.sh
 
 
 ENTRYPOINT ["/bin/bash", "/root/startscript.sh"]

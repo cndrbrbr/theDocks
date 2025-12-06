@@ -4,12 +4,16 @@
 #
 # (c) 2023 cndrbrbr
 #######################################################
-cd /root/tmpdata
-wget http://codefield.de/mcmine/mcserversC.zip
-cd /root/mcservers
-unzip /root/tmpdata/mcserversC.zip
-sleep 5
-rm /root/tmpdata/mcserversC.zip
+cd /root
+# copy plugins to mcsrvbase dir
+# 
+
+
+#wget http://codefield.de/mcmine/mcserversC.zip
+#cd /root/mcservers
+#unzip /root/tmpdata/mcserversC.zip
+#sleep 5
+#rm /root/tmpdata/mcserversC.zip
 #RUN sleep 5
 
 #chown -R mint:mint /home/mint/mcservers/
