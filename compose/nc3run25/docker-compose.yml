@@ -3,75 +3,33 @@
 # docker build -t java17mc .
 # Start with docker-compose
 # 
-# docker compose up -d
+# docker compose up -build oder -d
 # (c) 2022 cndrbrbr
 # 05.01.2023 Update Migration meckminecraft 2023 (cndrbrbr)
+# 06.12.2025 just run nc3 start with one server (survival hard)
+#            add the second one (survival soft)
+#            add the third one (survival ehle)
 #############################################################
 version: "3.3"   
 services:
-  java22:
-    image: java22
+  mcagjava22:
+    image: mcagjava22
     build:
-      context: ../java22
+      context: ../../java/java22
       dockerfile: Dockerfile
-  javamc:
-    image: javamc
+  java22mc:
+    image: java22mc
     build:
-      context: ../javamc
+      context: ../../minecraft/java22mc
       dockerfile: Dockerfile
     depends_on:
-      - java22
-    volumes:
-      - web_data:/var/www 
-      - mcjC_data:/root/mcservers
-      - bacC_data:/root/bac
-      - buildspimcC_data:/root/updates
+      - mcagjava22
     ports:
       - "25565:25565"
-      - "25565:25565" # all ports of servers plus firewall script! generated?
-  buildmc:
-    depends_on:
-      - javamc
-    image: buildmc
-    build:
-      context: ../buildmc
-      dockerfile: Dockerfile
-    volumes: 
-      - buildspimcC_data:/root/updates    
-  build8mc:
-    image: build8mc
-    depends_on:
-      - java8mc
-    build:
-      context: ../build8mc
-      dockerfile: Dockerfile
-    volumes: 
-      - buildspimc8_data:/root/updates    
-  webdb:
-    image: apachemmc
-    build:
-      context: ../apachemmc
-      dockerfile: Dockerfile
-    restart: always
-    ports:
-      - "80:80"
-      - "3306:3306"
-
-    volumes:
-      - web_data:/var/www
-      - mcj8_data:/home/mint/mcservers8
-      - mcjC_data:/home/mint/mcserversC
-      - db_data:/var/lib/mysql
+      - "25566:25566" 
+      - "25567:25567" 
+#    volumes:
     tty: true
     stdin_open: true
-    entrypoint: "/bin/bash"
+#volumes:
 
-volumes:
-  db_data:
-  web_data:
-  mcj8_data:
-  mcjC_data:
-  buildspimc8_data:
-  buildspimcC_data:
-  bac8_data:
-  bacC_data:
