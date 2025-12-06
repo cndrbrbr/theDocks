@@ -1,0 +1,77 @@
+#######################################################
+# Base Run Evironment for Meckminecraft Server 
+# Start with docker-compose
+# 
+# docker compose up -build oder -d
+# (c) 2025 cndrbrbr
+# 06.12.2025 rebuild meckminecraft (cndrbrbr)
+#############################################################
+version: "3.3"   
+services:
+# Java Base images
+  mcagjava8:
+    image: mcagjava8
+    build:
+      context: ../../java/java8
+      dockerfile: Dockerfile
+  mcagjava22:
+    image: mcagjava22
+    build:
+      context: ../../java/java22
+      dockerfile: Dockerfile
+# Minecraft Server
+  java8mc:
+    image: java8mc
+    depends_on:
+     - java8
+    build:
+        dockerfile: Dockerfile
+        context: ../java8mc
+    volumes: 
+      - mcj8_data:/home/mint/mcservers
+      - bac8_data:/root/bac
+      - buildspimc8_data:/root/updates
+    ports:
+      - "25580:25580"
+  javamc:
+    image: javamc
+    build:
+      context: ../javamc
+      dockerfile: Dockerfile
+    depends_on:
+      - java22
+    volumes:
+      - web_data:/var/www 
+      - mcjC_data:/root/mcservers
+      - bacC_data:/root/bac
+      - buildspimcC_data:/root/updates
+    ports:
+      - "25565:25565"
+  webdb:
+    image: apachemmc
+    build:
+      context: ../apachemmc
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "80:80"
+      - "3306:3306"
+
+    volumes:
+      - web_data:/var/www
+      - mcj8_data:/home/mint/mcservers8
+      - mcjC_data:/home/mint/mcserversC
+      - db_data:/var/lib/mysql
+    tty: true
+    stdin_open: true
+    entrypoint: "/bin/bash"
+
+volumes:
+  db_data:
+  web_data:
+  mcj8_data:
+  mcjC_data:
+  buildspimc8_data:
+  buildspimcC_data:
+  bac8_data:
+  bacC_data:
