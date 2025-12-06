@@ -3,6 +3,7 @@
 *.env
 .env
 *.jar
+*.tgz
 spigot*.jar
 output/
 plugins/
