@@ -1,0 +1,314 @@
+.:
+insgesamt 113880
+drwxrwxrwx 10 root root     4096  6. Dez 15:37 compose
+drwxr-xr-x  6 mint mint     4096  7. Dez 11:38 data
+drwxrwxrwx  6 root root     4096  5. Dez 22:56 java
+-rw-rw-rw-  1 root root 84523703  5. Dez 22:56 java22mc
+-rw-rw-rw-  1 root root 32036504  5. Dez 22:56 java8mc
+-rwxrwxrwx  1 root root    11357  5. Dez 22:56 LICENSE
+drwxrwxrwx  6 root root     4096  5. Dez 22:56 minecraft
+drwxrwxrwx  5 root root     4096  5. Dez 22:56 minecraftbuild
+-rwxrwxrwx  1 root root      654  5. Dez 22:56 README.md
+-rw-r--r--  1 root root        0  7. Dez 14:29 repofiles.txt
+drwxrwxrwx  3 root root     4096  5. Dez 22:56 system
+drwxrwxrwx  5 root root     4096  5. Dez 22:56 web
+
+./compose:
+insgesamt 32
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 codefieldrun25
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 env25
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 envbuild25
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 mcbuild25
+drwxr-xr-x 2 mint mint 4096  6. Dez 15:38 mcserverbase
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 meckminecraftrun25
+drwxrwxrwx 2 root root 4096  7. Dez 13:02 nc3run25
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 runmcmine
+
+./compose/codefieldrun25:
+insgesamt 4
+-rwxrwxrwx 1 root root 2101  5. Dez 22:56 docker-compose.yml
+
+./compose/env25:
+insgesamt 4
+-rwxrwxrwx 1 root root 2169  5. Dez 22:56 docker-compose.yml
+
+./compose/envbuild25:
+insgesamt 4
+-rwxrwxrwx 1 root root 1052  5. Dez 22:56 docker-compose.yml
+
+./compose/mcbuild25:
+insgesamt 4
+-rwxrwxrwx 1 root root 1100  6. Dez 20:47 docker-compose.yml
+
+./compose/mcserverbase:
+insgesamt 4
+-rwxrwxrwx 1 mint mint 1663  6. Dez 15:42 docker-compose.yml
+
+./compose/meckminecraftrun25:
+insgesamt 4
+-rwxrwxrwx 1 root root 1623  5. Dez 22:56 docker-compose.yml
+
+./compose/nc3run25:
+insgesamt 12
+-rwxrwxrwx 1 root root 1002  7. Dez 12:51 docker-compose.yml
+-rw-r--r-- 1 root root 6070  7. Dez 13:02 up.txt
+
+./compose/runmcmine:
+insgesamt 8
+-rwxrwxrwx 1 root root 2091  5. Dez 22:56 docker-compose-bak
+-rwxrwxrwx 1 root root 2101  5. Dez 22:56 docker-compose.yml
+
+./data:
+insgesamt 16
+drwxr-xr-x 4 mint mint 4096  6. Dez 19:04 mcserversw
+drwxrwxrwx 4 root root 4096  7. Dez 11:38 mcsrvbase
+drwxr-xr-x 4 mint mint 4096  6. Dez 18:16 plugins
+drwxr-xr-x 6 mint mint 4096  5. Dez 23:03 serverconfigs
+
+./data/mcserversw:
+insgesamt 8
+drwxr-xr-x 2 mint mint 4096  7. Dez 13:27 1.14.4
+drwxr-xr-x 2 mint mint 4096  7. Dez 13:28 1.21.10
+
+./data/mcserversw/1.14.4:
+insgesamt 31288
+-rw-r--r-- 1 root root 32036507  7. Dez 13:24 spigot-1.14.4.jar
+
+./data/mcserversw/1.21.10:
+insgesamt 83652
+-rw-r--r-- 1 root root 85655638  7. Dez 13:24 spigot-1.21.10.jar
+
+./data/mcsrvbase:
+insgesamt 20
+drwxrwxrwx 6 root root  4096  6. Dez 12:15 data
+drwxrwxrwx 2 root root  4096  6. Dez 18:15 logs
+-rw-r--r-- 1 root root 10240  7. Dez 11:38 mcsrvbase.tgz
+
+./data/mcsrvbase/data:
+insgesamt 16
+drwxrwxrwx 2 root root 4096  6. Dez 18:14 cfg
+drwxrwxrwx 2 root root 4096  6. Dez 18:15 jfr
+drwxrwxrwx 2 root root 4096  6. Dez 18:17 plugins
+drwxrwxrwx 2 root root 4096  6. Dez 18:15 worlds
+
+./data/mcsrvbase/data/cfg:
+insgesamt 4
+-rw-r--r-- 1 mint mint 174  7. Dez 13:04 mcconfigfiles.txt
+
+./data/mcsrvbase/data/jfr:
+insgesamt 0
+-rw-r--r-- 1 mint mint 0  6. Dez 18:15 mcjavadebugging.txt
+
+./data/mcsrvbase/data/plugins:
+insgesamt 0
+-rw-r--r-- 1 mint mint 0  6. Dez 18:15 mcplugins4thisserver.txt
+
+./data/mcsrvbase/data/worlds:
+insgesamt 4
+-rw-r--r-- 1 mint mint 118  6. Dez 19:30 folderforworlds.txt
+
+./data/mcsrvbase/logs:
+insgesamt 0
+-rw-r--r-- 1 mint mint 0  6. Dez 18:15 folderforlogs.txt
+
+./data/plugins:
+insgesamt 8
+drwxr-xr-x 2 mint mint 4096  6. Dez 18:17 1.14.4
+drwxr-xr-x 2 mint mint 4096  6. Dez 19:57 1.21.10
+-rw-r--r-- 1 mint mint    0  6. Dez 18:16 folder for all plugins
+
+./data/plugins/1.14.4:
+insgesamt 0
+-rw-r--r-- 1 mint mint 0  6. Dez 18:17 pluginsfor1.14.4.txt
+
+./data/plugins/1.21.10:
+insgesamt 24580
+-rwxrwxrwx 1 root root   356791  6. Dez 19:44 GroupManager.jar
+-rwxrwxrwx 1 root root    89064  6. Dez 19:45 HeadDrop-2.5.jar
+-rwxrwxrwx 1 root root   118902  6. Dez 19:45 MobHeadsv1.21.8v6.jar
+-rwxrwxrwx 1 root root  4309317  6. Dez 19:39 multiverse-core-5.3.4.jar
+-rwxrwxrwx 1 root root  1667072  6. Dez 19:39 multiverse-inventories-5.2.1.jar
+-rwxrwxrwx 1 root root    55711  6. Dez 19:40 multiverse-netherportals-5.0.3.jar
+-rwxrwxrwx 1 root root   139682  6. Dez 19:40 multiverse-portals-5.1.1.jar
+-rwxrwxrwx 1 root root    39834  6. Dez 19:40 multiverse-signportals-5.0.1.jar
+-rw-r--r-- 1 mint mint        0  6. Dez 18:17 pluginsfor1.21.10.txt
+-rwxrwxrwx 1 root root  1077732  6. Dez 19:43 ProtectionStones-2.10.5.jar
+-rwxrwxrwx 1 root root 10251186  6. Dez 19:44 ProtocolLib.jar
+-rwxrwxrwx 1 root root  5852715  6. Dez 19:42 ViaVersion-5.5.0.jar
+-rwxrwxrwx 1 root root  1166568  6. Dez 19:45 worldguard-bukkit-7.0.15-beta-01.jar
+-rwxrwxrwx 1 root root    18380  6. Dez 19:45 Xhomes-2.1-SNAPSHOT.jar
+
+./data/serverconfigs:
+insgesamt 16
+drwxr-xr-x 4 mint mint 4096  6. Dez 18:12 creative
+drwxr-xr-x 4 mint mint 4096  6. Dez 18:12 meckminecraft
+drwxr-xr-x 4 mint mint 4096  6. Dez 18:10 nc3
+drwxr-xr-x 4 mint mint 4096  6. Dez 18:13 scriptcraft14
+
+./data/serverconfigs/creative:
+insgesamt 8
+drwxr-xr-x 2 mint mint 4096  6. Dez 18:12 scripts
+drwxr-xr-x 2 mint mint 4096  6. Dez 18:12 worlds
+
+./data/serverconfigs/creative/scripts:
+insgesamt 8
+-rw-r--r-- 1 mint mint 105  6. Dez 20:02 customconfig_sh.txt
+-rw-r--r-- 1 mint mint   0  6. Dez 16:30 envvars.env
+-rwxrwxrwx 1 mint mint 603  6. Dez 20:02 setupFiles.sh
+
+./data/serverconfigs/creative/worlds:
+insgesamt 4
+-rw-r--r-- 1 mint mint 55  6. Dez 20:02 World_zip_files.txt
+
+./data/serverconfigs/meckminecraft:
+insgesamt 8
+drwxr-xr-x 2 mint mint 4096  6. Dez 18:12 scripts
+drwxr-xr-x 2 mint mint 4096  6. Dez 18:12 worlds
+
+./data/serverconfigs/meckminecraft/scripts:
+insgesamt 8
+-rw-r--r-- 1 mint mint 105  6. Dez 20:02 customconfig_sh.txt
+-rw-r--r-- 1 mint mint   0  6. Dez 16:30 envvars.env
+-rwxrwxrwx 1 mint mint 603  6. Dez 20:02 setupFiles.sh
+
+./data/serverconfigs/meckminecraft/worlds:
+insgesamt 4
+-rw-r--r-- 1 mint mint 55  6. Dez 20:02 World_zip_files.txt
+
+./data/serverconfigs/nc3:
+insgesamt 8
+drwxr-xr-x 2 mint mint 4096  6. Dez 20:04 scripts
+drwxr-xr-x 2 mint mint 4096  6. Dez 16:47 worlds
+
+./data/serverconfigs/nc3/scripts:
+insgesamt 8
+-rw-r--r-- 1 mint mint 346  6. Dez 20:01 customconfig.sh
+-rw-r--r-- 1 mint mint 106  6. Dez 20:02 customconfig_sh.txt
+-rw-r--r-- 1 mint mint   0  6. Dez 16:30 envvars.env
+
+./data/serverconfigs/nc3/worlds:
+insgesamt 4
+-rw-r--r-- 1 mint mint 55  6. Dez 20:00 World_zip_files.txt
+
+./data/serverconfigs/scriptcraft14:
+insgesamt 8
+drwxr-xr-x 2 mint mint 4096  6. Dez 18:12 scripts
+drwxr-xr-x 2 mint mint 4096  6. Dez 18:13 worlds
+
+./data/serverconfigs/scriptcraft14/scripts:
+insgesamt 8
+-rw-r--r-- 1 mint mint 105  6. Dez 20:02 customconfig_sh.txt
+-rw-r--r-- 1 mint mint   0  6. Dez 16:30 envvars.env
+-rwxrwxrwx 1 mint mint 603  6. Dez 20:02 setupFiles.sh
+
+./data/serverconfigs/scriptcraft14/worlds:
+insgesamt 4
+-rw-r--r-- 1 mint mint 55  6. Dez 20:02 World_zip_files.txt
+
+./java:
+insgesamt 16
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 java17
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 java21
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 java22
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 java8
+
+./java/java17:
+insgesamt 4
+-rwxrwxrwx 1 root root 965  5. Dez 22:56 Dockerfile
+
+./java/java21:
+insgesamt 4
+-rwxrwxrwx 1 root root 409  5. Dez 22:56 Dockerfile
+
+./java/java22:
+insgesamt 4
+-rwxrwxrwx 1 root root 1038  7. Dez 11:13 Dockerfile
+
+./java/java8:
+insgesamt 4
+-rwxrwxrwx 1 root root 1099  6. Dez 15:48 Dockerfile
+
+./minecraft:
+insgesamt 16
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 java17mc
+drwxrwxrwx 2 root root 4096  6. Dez 19:22 java22mc
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 java8mc
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 mcserverdockB
+
+./minecraft/java17mc:
+insgesamt 16
+-rwxrwxrwx 1 root root 676  5. Dez 22:56 Dockerfile
+-rwxrwxrwx 1 root root 569  5. Dez 22:56 setupFiles.sh
+-rwxrwxrwx 1 root root 822  6. Dez 19:20 startscript.sh
+-rwxrwxrwx 1 root root 200  5. Dez 22:56 startservices.sh
+
+./minecraft/java22mc:
+insgesamt 16
+-rwxrwxrwx 1 root root 1394  7. Dez 14:05 Dockerfile
+-rwxrwxrwx 1 root root  661  7. Dez 14:22 setupfiles.sh
+-rwxrwxrwx 1 root root  852  7. Dez 14:20 startscript.sh
+-rwxrwxrwx 1 root root 1312  7. Dez 14:13 start.sh
+
+./minecraft/java8mc:
+insgesamt 16
+-rwxrwxrwx 1 root root 607  5. Dez 22:56 Dockerfile
+-rwxrwxrwx 1 root root 347  5. Dez 22:56 setupFiles.sh
+-rwxrwxrwx 1 root root 253  5. Dez 22:56 startscript.sh
+-rwxrwxrwx 1 root root 214  5. Dez 22:56 startservices.sh
+
+./minecraft/mcserverdockB:
+insgesamt 4
+-rw-rw-rw- 1 root root 1737  5. Dez 22:56 Dockerfile
+
+./minecraftbuild:
+insgesamt 16
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 build8mc
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 buildCmc
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 buildmc
+-rwxrwxrwx 1 root root  301  5. Dez 22:56 postBuild.sh
+
+./minecraftbuild/build8mc:
+insgesamt 8
+-rwxrwxrwx 1 root root 676  5. Dez 22:56 Dockerfile
+-rwxrwxrwx 1 root root 615  5. Dez 22:56 startscript.sh
+
+./minecraftbuild/buildCmc:
+insgesamt 8
+-rwxrwxrwx 1 root root 458  5. Dez 22:56 Dockerfile
+-rwxrwxrwx 1 root root 427  5. Dez 22:56 startscript.sh
+
+./minecraftbuild/buildmc:
+insgesamt 8
+-rwxrwxrwx 1 root root 826  5. Dez 22:56 Dockerfile
+-rwxrwxrwx 1 root root 412  5. Dez 22:56 startscript.sh
+
+./system:
+insgesamt 4
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 CollectData
+
+./system/CollectData:
+insgesamt 8
+-rwxrwxrwx 1 root root 145  5. Dez 22:56 getApacheConfig
+-rwxrwxrwx 1 root root 377  5. Dez 22:56 getDatabaseData
+
+./web:
+insgesamt 12
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 apachemmc
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 mysqlmmc
+drwxrwxrwx 2 root root 4096  5. Dez 22:56 wp_db
+
+./web/apachemmc:
+insgesamt 16
+-rwxrwxrwx 1 root root 1432  5. Dez 22:56 Dockerfile
+-rwxrwxrwx 1 root root  930  5. Dez 22:56 setupFiles.sh
+-rwxrwxrwx 1 root root  274  5. Dez 22:56 startscript.sh
+-rwxrwxrwx 1 root root  213  5. Dez 22:56 startservices.sh
+
+./web/mysqlmmc:
+insgesamt 8
+-rwxrwxrwx 1 root root 929  5. Dez 22:56 Dockerfile
+-rwxrwxrwx 1 root root 393  5. Dez 22:56 startscript.sh
+
+./web/wp_db:
+insgesamt 4
+-rwxrwxrwx 1 root root 578  5. Dez 22:56 docker-compose.yml
