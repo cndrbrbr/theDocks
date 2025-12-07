@@ -10,7 +10,8 @@
 #!/bin/bash
 
 SCRIPT_A="/root/mcsrvbase/start.sh"
-SCRIPT_B="/root/setupFiles.sh"
+SCRIPT_B="/root/setupfiles.sh"
+
 
 # Prüfen ob Script A existiert
 if [[ -f "$SCRIPT_A" ]]; then
@@ -20,8 +21,9 @@ else
     echo "$SCRIPT_A nicht gefunden!"
 
     echo "Starte zuerst $SCRIPT_B..."
-    bash "$SCRIPT_B"
 
+    bash "$SCRIPT_B"
+    sleep 10
     echo "Versuche erneut, scriptA.sh auszuführen..."
 
     if [[ -f "$SCRIPT_A" ]]; then

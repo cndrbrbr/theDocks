@@ -8,14 +8,9 @@
 FROM debian:bookworm-slim
 
 # Install dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    wget \
-    gnupg \
-    mc \
-    screen \
-    nano \
-    ca-certificates \
- && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends wget gnupg mc screen nano
+
+RUN apt-get install -y --no-install-recommends ca-certificates && rm -rf /var/lib/apt/lists/*
 
 # Add Adoptium APT repo for JDK 22
 RUN wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor -o /usr/share/keyrings/adoptium.gpg && \

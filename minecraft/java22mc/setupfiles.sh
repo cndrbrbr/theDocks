@@ -5,15 +5,22 @@
 # (c) 2025 cndrbrbr
 #######################################################
 
-cd /root
 # create custom minecraft folder
-tar xvfz mcsrvbase.tgz 
+if [[ ! -d "/root/mcsrvbase/data/cfg" ]]; then
+    cd /root/mcsrvbase
+    echo "mcsrvbase-Daten fehlen – entpacke mcsrvbase.tgz ..."
+    tar -xvf mcsrvbase.tgz 
+else
+    echo "mcsrvbase/data ist bereits vorhanden – kein Entpacken nötig."
+fi
+
+cd /root
 # /root/mcsrvbase exists
 # copy minecraft jar
-cp /root/minecraftJar/* /root/mcsrvbase
+cp /root/minecraftjar/* /root/mcsrvbase
 cp /root/start.sh /root/mcsrvbase
 
 # copy plugins and configure server
-/root/customconfig.sh
+/root/customconfig/customconfig.sh
 
 
