@@ -1,0 +1,64 @@
+Attaching to java22mc-1, mcagjava22-1
+[Kmcagjava22-1 exited with code 0
+java22mc-1    | 
+java22mc-1    | /root/mcsrvbase/start.sh nicht gefunden!
+java22mc-1    | Starte zuerst /root/setupfiles.sh...
+java22mc-1    | 
+java22mc-1    | gzip: stdin: not in gzip format
+java22mc-1    | tar: Child returned status 1
+java22mc-1    | tar: Error is not recoverable: exiting now
+java22mc-1    | /root/setupfiles.sh: line 18: /root/customconfig.sh: No such file or directory
+java22mc-1    | Versuche erneut, scriptA.sh auszuführen...
+java22mc-1    | /root/mcsrvbase/start.sh ist jetzt vorhanden. Starte /root/mcsrvbase/start.sh ...
+java22mc-1    | Starte Minecraft...
+java22mc-1    | [0.439s][info][jfr,startup] Started recording 1. No limit specified, using maxsize=250MB as default.
+java22mc-1    | [0.439s][info][jfr,startup] 
+java22mc-1    | [0.439s][info][jfr,startup] Use jcmd 16 JFR.dump name=1 to copy recording data to file.
+java22mc-1    | Downloading mojang_1.21.10.jar
+java22mc-1    | Applying patches
+java22mc-1    | Starting org.bukkit.craftbukkit.Main
+java22mc-1    | *** Error, this build is outdated ***
+java22mc-1    | *** Please download a new build as per instructions from https://www.spigotmc.org/go/outdated-spigot ***
+java22mc-1    | *** Server will start in 20 seconds ***
+java22mc-1    | Loading libraries, please wait...
+java22mc-1    | [12:00:55] [ServerMain/INFO]: [STDERR]: You have used the Spigot command line EULA agreement flag.
+java22mc-1    | [12:00:55] [ServerMain/INFO]: [STDERR]: By using this setting you are indicating your agreement to Mojang's EULA (https://account.mojang.com/documents/minecraft_eula).
+java22mc-1    | [12:00:55] [ServerMain/INFO]: [STDERR]: If you do not agree to the above EULA please stop your server and remove this flag immediately.
+java22mc-1    | [12:00:55] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+java22mc-1    | [12:00:55] [ServerMain/INFO]: Found new data pack file/bukkit, loading it automatically
+java22mc-1    | [12:00:55] [ServerMain/INFO]: No existing world data, creating new world
+java22mc-1    | [12:00:56] [ServerMain/INFO]: Loaded 1461 recipes
+java22mc-1    | [12:00:55] [ServerMain/INFO]: [STDERR]: You have used the Spigot command line EULA agreement flag.
+java22mc-1    | [12:00:55] [ServerMain/INFO]: [STDERR]: By using this setting you are indicating your agreement to Mojang's EULA (https://account.mojang.com/documents/minecraft_eula).
+java22mc-1    | [12:00:55] [ServerMain/INFO]: [STDERR]: If you do not agree to the above EULA please stop your server and remove this flag immediately.
+java22mc-1    | [12:00:55] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+java22mc-1    | [12:00:55] [ServerMain/INFO]: Found new data pack file/bukkit, loading it automatically
+java22mc-1    | [12:00:55] [ServerMain/INFO]: No existing world data, creating new world
+java22mc-1    | [12:00:56] [ServerMain/INFO]: Loaded 1461 recipes
+java22mc-1    | [12:00:56] [Server thread/INFO]: Starting minecraft server version 1.21.10
+java22mc-1    | [12:00:56] [Server thread/INFO]: Loading properties
+0;6;15M0;6;15m65;56;16M65;56;16M65;56;16M65;56;16Mjava22mc-1    | [?1h=[?2004h>....[K[12:00:56] [Server thread/INFO]: This server is running CraftBukkit version 4561-Spigot-6e369ba-8d98187 (MC: 1.21.10) (Implementing API version 1.21.10-R0.1-SNAPSHOT)
+java22mc-1    | >....[K[12:00:57] [Server thread/INFO]: *** This version of Spigot contains changes to some enums. If you notice that plugins no longer work after updating, please report this to the developers of those plugins first. ***
+java22mc-1    | >....[K[12:00:57] [Server thread/INFO]: *** If you cannot update those plugins, you can try setting `settings.compatibility.enum-compatibility-mode` to `true` in `bukkit.yml`. ***
+java22mc-1    | >....[K[12:00:57] [Server thread/INFO]: Server Ping Player Sample Count: 12
+java22mc-1    | >....[K[12:00:57] [Server thread/INFO]: Using 4 threads for Netty based IO
+java22mc-1    | >....[K[12:00:57] [Server thread/INFO]: Debug logging is disabled
+java22mc-1    | >....[K[12:00:57] [Server thread/INFO]: Default game type: SURVIVAL
+java22mc-1    | >....[K[12:00:57] [Server thread/INFO]: Generating keypair
+java22mc-1    | >....[K[12:00:57] [Server thread/INFO]: Starting Minecraft server on 192.168.115.135:25566
+java22mc-1    | >....[K[12:00:57] [Server thread/INFO]: Using epoll channel type
+java22mc-1    | >....[K[12:00:57] [Server thread/WARN]: **** FAILED TO BIND TO PORT!
+java22mc-1    | >....[K[12:00:57] [Server thread/WARN]: The exception was: io.netty.channel.unix.Errors$NativeIoException: bind(..) failed: Cannot assign requested address
+java22mc-1    | >....[K[12:00:57] [Server thread/WARN]: Perhaps a server is already running on that port?
+java22mc-1    | >....[K[12:00:57] [Server thread/ERROR]: Encountered an unexpected exception
+java22mc-1    | java.lang.IllegalStateException: Failed to initialize server
+java22mc-1    | 	at net.minecraft.server.MinecraftServer.C(MinecraftServer.java:1064) ~[spigot-1.21.10.jar:4561-Spigot-6e369ba-8d98187]
+java22mc-1    | 	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:337) ~[spigot-1.21.10.jar:4561-Spigot-6e369ba-8d98187]
+java22mc-1    | 	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+java22mc-1    | >....[K[12:00:57] [Server thread/ERROR]: This crash report has been saved to: /root/mcsrvbase/crash-reports/crash-2025-12-07_12.00.57-server.txt
+java22mc-1    | >....[K[12:00:57] [Server thread/INFO]: Stopping server
+java22mc-1    | >....[K[12:00:57] [Server thread/INFO]: Saving players
+java22mc-1    | >....[K[12:00:57] [Server thread/INFO]: Saving worlds
+java22mc-1    | Server gestoppt mit Code 0
+java22mc-1    | Normaler Stop - kein Neustart.
+[Kjava22mc-1 exited with code 0

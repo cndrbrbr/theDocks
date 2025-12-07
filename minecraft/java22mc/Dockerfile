@@ -18,24 +18,27 @@ RUN apt-get -y upgrade
 
 WORKDIR /root
 RUN mkdir /root/plugins             
-RUN mkdir /root/customConfig
-RUN mkdir /root/minecraftJar
+RUN mkdir /root/customconfig
+RUN mkdir /root/minecraftjar
+RUN mkdir /root/mcsrvbase
 
-COPY ./startscript.sh /root
-COPY ./setupfiles.sh /root
-COPY ./start.sh /root
+COPY minecraft/java22mc/startscript.sh /root
+COPY minecraft/java22mc/setupfiles.sh /root
+COPY minecraft/java22mc/start.sh /root
 # server folders
-COPY ../../data/mcsrvbase.tgz /root
+COPY data/mcsrvbase/mcsrvbase.tgz /root/mcsrvbase
 # server software
-COPY ../../data/mcserversw/${Minecraft_Version}/* /root/minecraftJar
+COPY data/mcserversw/${Minecraft_Version}/* /root/minecraftjar
 # server customizing and worlds
-COPY ../../data/serverconfigs/${Minecraft_Server}/* /root/customconfig
+COPY data/serverconfigs/${Minecraft_Server}/* /root/customconfig
 # all plugins for Minecraft_Version
-COPY ../../data/plugins/${Minecraft_Version}/*  /root/plugins
+COPY data/plugins/${Minecraft_Version}/*  /root/plugins
   
-RUN chmod u+x /root/startscript.sh
-RUN chmod u+x /root/setupfiles.sh
-RUN chmod u+x /root/start.sh
-
+RUN chmod ugo+x /root/startscript.sh
+RUN chmod ugo+x /root/setupfiles.sh
+RUN chmod ugo+x /root/start.sh
+RUN chmod ugo+rw -R /root/*
+RUN chmod ugo+x /root/customconfig/customconfig.sh
 
 ENTRYPOINT ["/bin/bash", "/root/startscript.sh"]
+#CMD ["sleep", "infinity"]

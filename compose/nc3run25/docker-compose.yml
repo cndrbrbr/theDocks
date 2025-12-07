@@ -20,16 +20,21 @@ services:
   java22mc:
     image: java22mc
     build:
-      context: ../../minecraft/java22mc
-      dockerfile: Dockerfile
+      context: ../../
+      dockerfile: minecraft/java22mc/Dockerfile
     depends_on:
       - mcagjava22
     ports:
       - "25565:25565"
       - "25566:25566" 
       - "25567:25567" 
-#    volumes:
+    volumes:
+      - data:/root/mcsrvbase/data
+      - logs:/root/mcsrvbase/logs
     tty: true
     stdin_open: true
-#volumes:
+volumes:
+  data:
+  logs:
+
 
