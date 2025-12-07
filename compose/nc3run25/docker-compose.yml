@@ -10,31 +10,46 @@
 #            add the second one (survival soft)
 #            add the third one (survival ehle)
 #############################################################
-version: "3.3"   
+version: "3.3"
+
 services:
   mcagjava22:
     image: mcagjava22
     build:
       context: ../../java/java22
       dockerfile: Dockerfile
+
   java22mc:
     image: java22mc
     build:
       context: ../../
       dockerfile: minecraft/java22mc/Dockerfile
+      args:
+        Minecraft_Version: "1.21.10"
+        Minecraft_Server: "nc3"
     depends_on:
       - mcagjava22
+    environment:
+       Minecraft_Version: "1.21.10"
+       Minecraft_Server: "nc3"
+       servername: "nc3"
+       levelname: "world"
+       maxplayers: "5"
+       spigot: "spigot-1.21.10.jar"
+       port: "25566"
+       sizes: "1G"
+       sizex: "1G"
     ports:
       - "25565:25565"
-      - "25566:25566" 
-      - "25567:25567" 
+      - "25566:25566"
+      - "25567:25567"
     volumes:
       - data:/root/mcsrvbase/data
       - logs:/root/mcsrvbase/logs
     tty: true
     stdin_open: true
+
 volumes:
   data:
   logs:
-
 
