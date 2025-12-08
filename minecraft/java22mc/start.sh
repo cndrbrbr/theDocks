@@ -9,20 +9,30 @@
 # chmod +x start.sh
 #######################################################
 
-servername="nc3"
-levelname="world"
-maxplayers=5
-spigot="spigot-1.21.10.jar"
-#host="localhost"
-port=25566
-	 #-jar $spigot \   	--initSettings \
+set -e
+cd /root
+# .env laden, falls vorhanden
+if [[ -f /root/.env ]]; then
+  set -a
+  . /root/.env
+  set +a
+fi
+Minecraft_Version="${Minecraft_Version:-1.21.10}"
+Minecraft_Server="${Minecraft_Server:-nc3}"
+servername="${servername:-nc3}"
+levelname="${levelname:-world}"
+maxplayers="${maxplayers:-5}"
+spigot="${spigot:-spigot-1.21.10.jar}"
+port="${port:-25566}"
+sizes="${sizes:-1G}"
+sizex="${sizex:-1G}"
 
 cd /root/mcsrvbase
 echo "eula=true" > eula.txt
 while true; do
     echo "Starte Minecraft..."
 
-	java -Xms1G -Xmx1G \
+	java -Xms${sizes} -Xmx${sizex} \
 	-Dfile.encoding=UTF-8 \
 	-jar $spigot \
 	--bukkit-settings "./data/cfg/bukkit.yml" \

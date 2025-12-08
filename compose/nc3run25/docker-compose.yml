@@ -18,21 +18,48 @@ services:
     build:
       context: ../../java/java22
       dockerfile: Dockerfile
-
-  java22mc:
+  softsurv:
     image: java22mc
     build:
       context: ../../
       dockerfile: minecraft/java22mc/Dockerfile
       args:
         Minecraft_Version: "1.21.10"
-        Minecraft_Server: "nc3"
+        Minecraft_Server: "softsurv"
     depends_on:
       - mcagjava22
     environment:
        Minecraft_Version: "1.21.10"
-       Minecraft_Server: "nc3"
-       servername: "nc3"
+       Minecraft_Server: "softsurv"
+       servername: "Minecraft AG Soft Survival"
+       levelname: "world"
+       maxplayers: "5"
+       spigot: "spigot-1.21.10.jar"
+       port: "25565"
+       sizes: "1G"
+       sizex: "1G"
+    ports:
+      - "25565:25565"
+    volumes:
+      - data_soft:/root/mcsrvbase/data
+      - logs_soft:/root/mcsrvbase/logs
+    tty: true
+    stdin_open: true
+
+  hardsurv:
+    image: java22mc
+    build:
+      context: ../../
+      dockerfile: minecraft/java22mc/Dockerfile
+      args:
+        Minecraft_Version: "1.21.10"
+        Minecraft_Server: "hardsurv"
+    depends_on:
+      - mcagjava22
+    environment:
+       Minecraft_Version: "1.21.10"
+       Minecraft_Server: "hardsurv"
+       servername: "Minecraft AG Hard Survival"
        levelname: "world"
        maxplayers: "5"
        spigot: "spigot-1.21.10.jar"
@@ -40,16 +67,46 @@ services:
        sizes: "1G"
        sizex: "1G"
     ports:
-      - "25565:25565"
       - "25566:25566"
+    volumes:
+      - data_hard:/root/mcsrvbase/data
+      - logs_hard:/root/mcsrvbase/logs
+    tty: true
+    stdin_open: true
+
+  ehle25:
+    image: java22mc
+    build:
+      context: ../../
+      dockerfile: minecraft/java22mc/Dockerfile
+      args:
+        Minecraft_Version: "1.21.10"
+        Minecraft_Server: "ehle25"
+    depends_on:
+      - mcagjava22
+    environment:
+       Minecraft_Version: "1.21.10"
+       Minecraft_Server: "ehle25"
+       servername: "ehle25"
+       levelname: "world"
+       maxplayers: "5"
+       spigot: "spigot-1.21.10.jar"
+       port: "25567"
+       sizes: "1G"
+       sizex: "1G"
+    ports:
       - "25567:25567"
     volumes:
-      - data:/root/mcsrvbase/data
-      - logs:/root/mcsrvbase/logs
+      - data_ehle25:/root/mcsrvbase/data
+      - logs_ehle25:/root/mcsrvbase/logs
     tty: true
     stdin_open: true
 
 volumes:
-  data:
-  logs:
+  data_ehle25:
+  logs_ehle25:
+  data_hard:
+  logs_hard:  
+  data_soft:
+  logs_soft:
 
