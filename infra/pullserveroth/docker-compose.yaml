@@ -1,0 +1,16 @@
+
+services:
+  cloud:
+    image: atmoz/sftp
+    container_name: cloud_drive
+    ports:
+      - "2222:22"
+    volumes:
+      - sftp_etc_ssh:/etc/ssh
+      - /srv/cloud:/home/user1/upload
+      - /srv/sshkeys/user1.pub:/home/user1/.ssh/keys/user1.pub:ro
+    command: "user1:::upload"
+    restart: unless-stopped
+
+volumes:
+  sftp_etc_ssh:

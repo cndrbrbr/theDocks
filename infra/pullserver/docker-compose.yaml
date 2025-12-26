@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  cloud:
+    build: .
+    container_name: sftp_cloud
+    ports:
+      - "2222:22"
+    environment:
+      SFTP_USER: "user1"
+      SFTP_UID: "1000"
+      SFTP_GID: "1000"
+    volumes:
+      - /srv/cloud:/data/upload
+      - /srv/sshkeys:/keys:ro
+      # optional: persist host keys (verhindert Hostkey-Wechsel)
+      - sftp_etc_ssh:/etc/ssh
+    restart: unless-stopped
+
+volumes:
+  sftp_etc_ssh:
+
+
