@@ -1,0 +1,18 @@
+############################
+#
+#  Just get Java and start 
+#  minecraft servers
+############################
+services:
+ mc:
+    image: java22mc
+    volumes:
+      - mcsrv25:/root/data
+    ports:
+      - "25565:25565"
+      - "25566:25566"
+      - "25567:25567"
+      - "25568:25568"
+      - "8123:8123"
+volumes:
+  mcsrv25:

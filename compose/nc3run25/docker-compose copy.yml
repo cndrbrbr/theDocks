@@ -45,6 +45,7 @@ services:
   #     - logs_soft:/root/mcsrvbase/logs
   #   tty: true
   #   stdin_open: true
+
   # hardsurv:
   #   image: java22mc
   #   build:

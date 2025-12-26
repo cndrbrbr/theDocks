@@ -8,18 +8,6 @@
 # - config var für verzeichnisname der serverconfig
 #######################################################
 FROM mcagjava22
-# env parameter which server aus compose
-ARG Minecraft_Version
-ARG Minecraft_Server
-ARG servername
-ARG levelname
-ARG maxplayers
-ARG spigot
-ARG port
-ARG sizes
-ARG sizex
-
-
 
 USER root
 RUN apt-get update --fix-missing -y
@@ -60,11 +48,10 @@ levelname=${levelname}
 maxplayers=${maxplayers}
 spigot=${spigot}
 port=${port}
-port=${port}
 sizes=${sizes}
 sizex=${sizex}
 EOF
 
 
-ENTRYPOINT ["/bin/bash", "/root/startscript.sh"]
-#CMD ["sleep", "infinity"]
+#ENTRYPOINT ["/bin/bash", "/root/startscript.sh"]
+CMD ["sleep", "infinity"]
