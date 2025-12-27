@@ -1,11 +1,12 @@
 ############################
-#
+#  docker compose up -d
+#  docker exec -ti barejavamc-mc-1 /bin/bash
 #  Just get Java and start 
-#  minecraft servers
+#  minecraft servers manually
 ############################
 services:
  mc:
-    image: java22mc
+    image: baremc22
     volumes:
       - mcsrv25:/root/data
       - /srv/sshkeys:/keys:ro

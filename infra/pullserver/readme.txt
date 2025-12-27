@@ -2,6 +2,13 @@
 mkdir /srv/cloud
 mkdir /srv/sshkeys
 
+copy cloud_key and cloud_key.pub
+to /srv/sshkeys
+
+chmod 700 /srv/sshkeys
+chmod 600 /srv/sshkeys/cloud_key
+chmod 644 /srv/sshkeys/cloud_key.pub
+
 Presumed Folder Structure of pullserver
 .
 ├── cloud
