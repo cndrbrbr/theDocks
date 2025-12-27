@@ -23,15 +23,7 @@ RUN mkdir /root/mcsrvbase
 COPY minecraft/java22mc/startscript.sh /root
 COPY minecraft/java22mc/setupfiles.sh /root
 COPY minecraft/java22mc/start.sh /root
-# server folders
-COPY data/mcsrvbase/mcsrvbase.tgz /root/mcsrvbase
-# server software
-COPY data/mcserversw/${Minecraft_Version}/* /root/minecraftjar
-# server customizing and worlds
-COPY data/serverconfigs/${Minecraft_Server}/* /root/customconfig
 
-# all plugins for Minecraft_Version
-COPY data/plugins/${Minecraft_Version}/*  /root/plugins
   
 RUN chmod ugo+x /root/startscript.sh
 RUN chmod ugo+x /root/setupfiles.sh

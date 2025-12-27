@@ -96,6 +96,7 @@ services:
     ports:
       - "25567:25567"
     volumes:
+      - /srv/sshkeys:/keys:ro
       - data_ehle25:/root/mcsrvbase/data
       - logs_ehle25:/root/mcsrvbase/logs
     tty: true
