@@ -13,6 +13,17 @@ USER root
 RUN apt-get update --fix-missing -y
 RUN apt-get -y upgrade 
 
+ARG Minecraft_Version=1.21.10
+ARG Minecraft_Server="nc3"
+ARG Minecraft_Version
+ARG Minecraft_Server
+ARG servername
+ARG levelname
+ARG maxplayers
+ARG spigot
+ARG port
+ARG sizes
+ARG sizex
 
 WORKDIR /root
 RUN mkdir /root/plugins             

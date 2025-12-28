@@ -1,3 +1,11 @@
+###############################################
+# pullserver for delivering costomizing data
+#
+# user and config data stored frequently
+# to update server software on the fly
+# (c) 2025 cndrbrbr
+###############################################
+use rights for user1
 
 mkdir /srv/cloud
 mkdir /srv/sshkeys
@@ -46,3 +54,6 @@ auf dem client
 scp -r -i .\cloud_key -P 2222 .\data\* user1@192.168.115.135:upload/
 
 scp -r -i .\cloud_key -P 2222 user1@192.168.115.135:upload/test.txt .\data\test.txt
+
+scp -i /keys/cloud_key -P 2222 user1@192.168.115.135:upload/test.txt ./test.txt
+
