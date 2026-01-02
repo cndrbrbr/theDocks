@@ -13,37 +13,28 @@ FROM mcagjava22
 USER root
 RUN apt-get update --fix-missing -y
 RUN apt-get -y upgrade 
+RUN apt-get install -y openssh-client
+RUN apt-get install -y inotify-tools
 
-
-WORKDIR /root
-RUN mkdir /root/plugins             
-RUN mkdir /root/customconfig
-RUN mkdir /root/minecraftjar
+WORKDIR /root          
 RUN mkdir /root/mcsrvbase
 
-COPY minecraft/java22mc/startscript.sh /root
-COPY minecraft/java22mc/setupfiles.sh /root
-COPY minecraft/java22mc/start.sh /root
-
+COPY minecraft/mcsrvj22/startscript.sh /root
+COPY minecraft/mcsrvj22/setupfiles.sh /root
+COPY minecraft/mcsrvj22/start.sh /root
+COPY minecraft/mcsrvj22/customconfig.sh /root
+COPY minecraft/mcsrvj22/expand.sh /root
+COPY minecraft/mcsrvj22/watch_copy.sh /root
   
 RUN chmod ugo+x /root/startscript.sh
 RUN chmod ugo+x /root/setupfiles.sh
 RUN chmod ugo+x /root/start.sh
+RUN chmod ugo+x /root/expand.sh 
+RUN chmod ugo+x /root/watch_copy.sh 
+RUN chmod ugo+x /root/customconfig.sh
 RUN chmod ugo+rw -R /root/*
-RUN chmod ugo+x /root/customconfig/customconfig.sh
 
-# .env erzeugen
-RUN cat <<EOF > /root/.env
-Minecraft_Version=${Minecraft_Version}
-Minecraft_Server=${Minecraft_Server}
-servername=${servername}
-levelname=${levelname}
-maxplayers=${maxplayers}
-spigot=${spigot}
-port=${port}
-sizes=${sizes}
-sizex=${sizex}
-EOF
+
 
 
 #ENTRYPOINT ["/bin/bash", "/root/startscript.sh"]

@@ -1,0 +1,60 @@
+#######################################################
+# Run Evironment for Meckminecraft Server 
+# docker build -t java17mc .
+# Start with docker-compose
+# console: docker exec -ti mc_nc3_26-ehle25-1 /bin/bash 
+#
+# docker compose up -build oder -d
+# (c) 2022 cndrbrbr
+# 05.01.2023 Update Migration meckminecraft 2023 (cndrbrbr)
+# 06.12.2025 just run nc3 start with one server (survival hard)
+#            add the second one (survival soft)
+#            add the third one (survival ehle)
+# 01.01.2026 use the pullserver
+#############################################################
+version: "3.3"
+
+services:
+  mcagjava22:
+    image: mcagjava22
+    build:
+      context: ../../java/java22
+      dockerfile: Dockerfile
+  
+  ehle25:
+    image: mcsrvj22
+    build:
+      context: ../../
+      dockerfile: minecraft/mcsrvj22/Dockerfile
+    depends_on:
+      - mcagjava22
+    environment:
+       minecraftversion: "1.21.10"
+       serverdatakey: "ehle25"
+       servername: "Ehles Minecraft 2025 (^-^)"
+       levelname: "world"
+       maxplayers: "10"
+       serverfilename: "spigot-1.21.10.jar"
+       port: "25568"
+       sizes: "1G"
+       sizex: "1G"
+       servertech: "spigot"
+       onlinemode: "true"
+       pullserver: "192.168.115.135"
+    ports:
+      - "25568:25568"
+    volumes:
+      - /srv/sshkeys:/keys:ro
+      - data_ehle25:/root/mcsrvbase/data
+      - logs_ehle25:/root/mcsrvbase/logs
+    tty: true
+    stdin_open: true
+
+volumes:
+  data_ehle25:
+  logs_ehle25:
+  data_hard:
+  logs_hard:  
+  data_soft:
+  logs_soft:
+

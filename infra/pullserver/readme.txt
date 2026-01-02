@@ -51,9 +51,13 @@ servers contain
 - serverconfig.tgz = configfiles of the server
 
 auf dem client
-scp -r -i .\cloud_key -P 2222 .\data\* user1@192.168.115.135:upload/
+scp -r -i .\cloud_key -P 2222 .\data\* user1@192.168.115.135:./
 
-scp -r -i .\cloud_key -P 2222 user1@192.168.115.135:upload/test.txt .\data\test.txt
+scp -r -i .\cloud_key -P 2222 user1@192.168.115.135:./test.txt .\data\test.txt
 
-scp -i /keys/cloud_key -P 2222 user1@192.168.115.135:upload/test.txt ./test.txt
+scp -i /keys/cloud_key -P 2222 -o StrictHostKeyChecking=no user1@192.168.115.135:./test.txt ./test.txt
+
+scp -i /keys/cloud_key -P 2222 \
+    -o StrictHostKeyChecking=no \
+    user1@192.168.115.135:./test.txt ./test.txt
 

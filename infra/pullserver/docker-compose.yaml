@@ -1,3 +1,13 @@
+#######################################################
+# Pullserver for Meckminecraft Server 
+# docker compse build
+# Start with docker-compose up -d
+# console: docker exec -ti sftp_cloud /bin/bash 
+#
+# docker compose up -build oder -d
+# (c) 2025 cndrbrbr
+# 01.01.2026 use the pullserver for nc3
+#############################################################
 version: "3.8"
 
 services:
@@ -11,7 +21,7 @@ services:
       SFTP_UID: "1000"
       SFTP_GID: "1000"
     volumes:
-      - /srv/cloud:/data/upload
+      - /srv/cloud:/data
       - /srv/sshkeys:/keys:ro
       # optional: persist host keys (verhindert Hostkey-Wechsel)
       - sftp_etc_ssh:/etc/ssh
