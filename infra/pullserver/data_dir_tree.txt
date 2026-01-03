@@ -1,0 +1,68 @@
+.
+├── ./cloud
+│   ├── ./cloud/dirtree.txt
+│   ├── ./cloud/dir.txt
+│   ├── ./cloud/mcsoftware
+│   │   ├── ./cloud/mcsoftware/bungee
+│   │   └── ./cloud/mcsoftware/server
+│   │       ├── ./cloud/mcsoftware/server/1.14.4
+│   │       │   └── ./cloud/mcsoftware/server/1.14.4/spigot-1.14.4.jar
+│   │       └── ./cloud/mcsoftware/server/1.21.10
+│   │           └── ./cloud/mcsoftware/server/1.21.10/spigot-1.21.10.jar
+│   ├── ./cloud/mcsrvbase
+│   │   ├── ./cloud/mcsrvbase/data
+│   │   │   ├── ./cloud/mcsrvbase/data/cfg
+│   │   │   │   └── ./cloud/mcsrvbase/data/cfg/mcconfigfiles.txt
+│   │   │   ├── ./cloud/mcsrvbase/data/jfr
+│   │   │   │   └── ./cloud/mcsrvbase/data/jfr/mcjavadebugging.txt
+│   │   │   ├── ./cloud/mcsrvbase/data/plugins
+│   │   │   │   └── ./cloud/mcsrvbase/data/plugins/mcplugins4thisserver.txt
+│   │   │   └── ./cloud/mcsrvbase/data/worlds
+│   │   │       └── ./cloud/mcsrvbase/data/worlds/folderforworlds.txt
+│   │   ├── ./cloud/mcsrvbase/logs
+│   │   │   └── ./cloud/mcsrvbase/logs/folderforlogs.txt
+│   │   └── ./cloud/mcsrvbase/mcsrvbase.tgz
+│   ├── ./cloud/plugins
+│   │   ├── ./cloud/plugins/1.14.4
+│   │   └── ./cloud/plugins/1.21.10
+│   │       ├── ./cloud/plugins/1.21.10/CoreProtect-CE-23.0.jar
+│   │       ├── ./cloud/plugins/1.21.10/GroupManager.jar
+│   │       ├── ./cloud/plugins/1.21.10/HeadDrop-2.5.jar
+│   │       ├── ./cloud/plugins/1.21.10/MobHeadsv1.21.8v6.jar
+│   │       ├── ./cloud/plugins/1.21.10/multiverse-core-5.3.4.jar
+│   │       ├── ./cloud/plugins/1.21.10/multiverse-inventories-5.2.1.jar
+│   │       ├── ./cloud/plugins/1.21.10/multiverse-netherportals-5.0.3.jar
+│   │       ├── ./cloud/plugins/1.21.10/multiverse-portals-5.1.1.jar
+│   │       ├── ./cloud/plugins/1.21.10/multiverse-signportals-5.0.1.jar
+│   │       ├── ./cloud/plugins/1.21.10/pluginsfor1.21.10.txt
+│   │       ├── ./cloud/plugins/1.21.10/ProtectionStones-2.10.5.jar
+│   │       ├── ./cloud/plugins/1.21.10/ProtocolLib.jar
+│   │       ├── ./cloud/plugins/1.21.10/ViaVersion-5.5.0.jar
+│   │       ├── ./cloud/plugins/1.21.10/worldguard-bukkit-7.0.15-beta-01.jar
+│   │       └── ./cloud/plugins/1.21.10/Xhomes-2.1-SNAPSHOT.jar
+│   ├── ./cloud/servers
+│   │   ├── ./cloud/servers/ehle25
+│   │   │   ├── ./cloud/servers/ehle25/pluginconfig
+│   │   │   │   └── ./cloud/servers/ehle25/pluginconfig/Xhomes.zip
+│   │   │   ├── ./cloud/servers/ehle25/plugins.txt
+│   │   │   ├── ./cloud/servers/ehle25/serverconfig.zip
+│   │   │   └── ./cloud/servers/ehle25/worlds
+│   │   │       └── ./cloud/servers/ehle25/worlds/20251225-ehle25-world.zip
+│   │   ├── ./cloud/servers/hard
+│   │   │   ├── ./cloud/servers/hard/customconfig.sh
+│   │   │   └── ./cloud/servers/hard/whitelist.json
+│   │   ├── ./cloud/servers/mctown
+│   │   ├── ./cloud/servers/meckminecraft
+│   │   ├── ./cloud/servers/multivitamin
+│   │   ├── ./cloud/servers/scriptcraft
+│   │   ├── ./cloud/servers/soft
+│   │   └── ./cloud/servers/weih24
+│   ├── ./cloud/test1.txt
+│   ├── ./cloud/test.txt
+│   └── ./cloud/upload
+├── ./dirtree2.txt
+├── ./dirtree.txt
+└── ./sshkeys
+    ├── ./sshkeys/cloud_key
+    └── ./sshkeys/cloud_key.pub
+
